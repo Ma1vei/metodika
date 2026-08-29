@@ -13,7 +13,7 @@ get_header();
 			</article>
 		<?php endwhile; ?>
 	<?php else : ?>
-		<p>Материалы не найдены.</p>
+		<p><?php esc_html_e( 'Материалы не найдены.', 'migrapro-static' ); ?></p>
 	<?php endif; ?>
 </main>
 
