@@ -64,7 +64,28 @@ $site_name = get_bloginfo( 'name' );
 
 		<div class="header__bottom" id="mobile-menu" data-mobile-menu>
 			<nav class="nav" id="header-nav" aria-label="Главное меню">
-				<a class="nav__link" href="#paths">Услуги</a>
+				<div class="nav__item nav__item--drop" data-dropdown>
+					<button class="nav__link nav__link--btn" type="button" data-dropdown-btn aria-expanded="false">
+						Услуги
+						<svg class="nav__chevron" viewBox="0 0 12 8" width="10" height="7" aria-hidden="true"><path d="M1 1.5 6 6.5 11 1.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+					</button>
+					<div class="dropdown" data-dropdown-panel hidden>
+						<ul class="dropdown__list">
+							<li><a href="#paths"><strong>РВП</strong><span>Разрешение на временное проживание</span></a></li>
+							<li><a href="#paths"><strong>ВНЖ</strong><span>Вид на жительство, бессрочный</span></a></li>
+							<li><a href="#paths"><strong>Гражданство РФ</strong><span>Общий и упрощённый порядок</span></a></li>
+							<li><a href="#paths"><strong>Репатриация</strong><span>Программа возвращения соотечественников</span></a></li>
+							<li><a href="#paths"><strong>Запрет на въезд и депортация</strong><span>Обжалование и снятие ограничений</span></a></li>
+							<li><a href="#consult-modal" data-open-modal><strong>Консультация миграционного юриста</strong><span>Разбор ситуации и план действий</span></a></li>
+							<li class="dropdown-all-item">
+								<a class="dropdown__all" href="#paths">
+									Все услуги и цены
+									<svg class="dropdown__arrow" viewBox="0 0 12 12" width="12" height="12" aria-hidden="true"><path d="M10.9 9.4V1H2.38M10.9 1 1 10.9" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
 				<a class="nav__link" href="#employers">Работодателям</a>
 				<a class="nav__link" href="#about">О нас</a>
 				<a class="nav__link" href="#about">База знаний</a>

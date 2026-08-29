@@ -24,6 +24,7 @@ add_action( 'after_setup_theme', 'migrapro_static_setup' );
 
 function migrapro_static_assets() {
 	$css_path = get_theme_file_path( '/css/style.css' );
+	$js_path  = get_theme_file_path( '/js/main.js' );
 
 	wp_enqueue_style(
 		'migrapro-static-fonts',
@@ -37,6 +38,14 @@ function migrapro_static_assets() {
 		get_theme_file_uri( '/css/style.css' ),
 		array( 'migrapro-static-fonts' ),
 		file_exists( $css_path ) ? (string) filemtime( $css_path ) : '1.0.0'
+	);
+
+	wp_enqueue_script(
+		'migrapro-static-main',
+		get_theme_file_uri( '/js/main.js' ),
+		array(),
+		file_exists( $js_path ) ? (string) filemtime( $js_path ) : '1.0.0',
+		true
 	);
 }
 add_action( 'wp_enqueue_scripts', 'migrapro_static_assets' );
